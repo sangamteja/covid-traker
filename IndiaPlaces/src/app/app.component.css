@@ -1,0 +1,56 @@
+.pageContent {
+  height: 100%;
+  width: 100%;
+}
+.container {
+  list-style: none;
+  flex: 0 0 33.333333%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  flex-direction: row;
+}
+.ulClass {
+  color: white;
+  margin: 15px;
+  padding: 8px;
+  background-color: #3d50c5;
+}
+.site-header {
+  font-size: xx-large;
+  text-align: center;
+  background-color: #009aff;
+  color: wheat;
+  font-weight: bold;
+}
+.site-footer {
+  min-height: 100%;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+  text-align: end;
+}
+.btnBack {
+  color: white;
+  background-color: #3d50c5;
+  font-size: 15px;
+}
+
+.distButtons {
+  padding: 2px;
+  margin: 2px;
+  height: 45px;
+  width: fit-content;
+  margin-top: 25px;
+  font-size: 15px;
+}
+.distDetailsCls {
+  padding: 2px;
+  margin: 2px;
+  align-items: center;
+}
+.distUlCls {
+  background-color: #3d50c5;
+  color: white;
+  text-align: center;
+}

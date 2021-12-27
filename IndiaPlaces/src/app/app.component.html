@@ -1,0 +1,44 @@
+<div *ngIf="isStates" class="pageContent">
+  <div class="site-header">States & Union Territories</div>
+  <div class="container">
+    <ul *ngFor="let state of allStateData" class="ulClass">
+      <li (click)="stateName(state)">{{ state.stateName[0] }}</li>
+    </ul>
+  </div>
+</div>
+
+<div *ngIf="isDistricts" class="pageContent">
+  <div class="site-header">{{selectedStateName}} Districts</div>
+  <div class="container">
+    <ul *ngFor="let district of allDistrictData" class="ulClass">
+      <li (click)="districtNames(district)">{{ district.districtName[0] }}</li>
+    </ul>
+  </div>
+  <div class="site-footer">
+    <button mat-button class="btnBack distButtons" (click)="backToStates()">
+      Back To states List
+    </button>
+  </div>
+</div>
+
+<div *ngIf="isDistricDetails" class="pageContent">
+  <div class="site-header">{{districName}} District Details</div>
+  <div *ngIf="districtDetails" class="distDetailsCls">
+    <ul class="distUlCls">
+      <div>Active: {{ districtDetails?.active }}</div>
+      <div>Confirmed: {{ districtDetails?.confirmed }}</div>
+      <div>Deceased: {{ districtDetails?.deceased }}</div>
+      <div>Migratedother: {{ districtDetails?.migratedother }}</div>
+      <div>Notes: {{ districtDetails?.notes }}</div>
+      <div>Recovered: {{ districtDetails?.recovered }}</div>
+    </ul>
+  </div>
+  <div class="site-footer">
+    <button mat-button class="btnBack distButtons" (click)="backToStates()">
+      Back To states List
+    </button>
+    <button mat-button class="btnBack distButtons" (click)="backToDistricts()">
+      Back To District List
+    </button>
+  </div>
+</div>
